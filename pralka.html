@@ -5,30 +5,86 @@
     <meta charset="UTF-8">
     <meta name="author" content="Сєчко Юліан">
     <title>Пральні машини - Магазин побутової техніки</title>
+
+    <!-- Підключення зовнішнього CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Стиль рівня документу: перевизначення стилю для посилань -->
+    <style>
+        a {
+            color: #880e4f;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            color: #ad1457;
+            text-decoration: underline;
+        }
+    </style>
 </head>
 
-<<<<<<< HEAD
-<body bgcolor="#fff0f5" link="blue" vlink="purple" alink="red">
-
-    <h1>Пральні машини</h1>
-
-    <p>Сучасна <b>пральна машина</b> — це ваш надійний помічник у догляді за речами.</p>
-    <p>Ми пропонуємо моделі з <i>різним типом завантаження</i> та безліччю функцій.</p>
-
-    <p>У нашому магазині є такі пральні машини:</p>
-    <ul type="disc">
-=======
 <body>
 
     <h1>Пральні машини</h1>
 
+    <p>Сучасна <b>пральна машина</b> — це ваш надійний помічник у догляді за речами.</p>
+
+    <!-- Абзац із внутрішнім стилем -->
+    <p
+        style="font-size: 1em; color: #880e4f; background-color: #fce4ec; padding: 8px 14px; border-left: 4px solid #c2185b; border-radius: 4px;">
+        Ми пропонуємо моделі з <i>різним типом завантаження</i> та безліччю функцій.
+    </p>
+
     <p>У нашому магазині є такі пральні машини:</p>
     <ul>
->>>>>>> b72e712037f00250d716324238afab11d026a905
-        <li>Samsung WW60 - 12000 грн</li>
-        <li>LG F2V3 - 15000 грн</li>
-        <li>Bosch WAN28 - 18000 грн</li>
+        <li>Samsung WW60 — 12 000 грн</li>
+        <li>LG F2V3 — 15 000 грн</li>
+        <li>Bosch WAN28 — 18 000 грн</li>
     </ul>
+
+    <h2>Характеристики моделей</h2>
+    <dl>
+        <dt>Samsung WW60</dt>
+        <dd>Завантаження 6 кг, клас A+++, 1200 об/хв, Eco Bubble технологія.</dd>
+        <dt>LG F2V3</dt>
+        <dd>Завантаження 7 кг, клас A+++, 1200 об/хв, Wi-Fi, система AI DD.</dd>
+        <dt>Bosch WAN28</dt>
+        <dd>Завантаження 7 кг, клас A+, 1400 об/хв, EcoSilence Drive двигун.</dd>
+    </dl>
+
+    <!-- Абзац із CSS-класом (використання !important через зовнішній CSS) -->
+    <p class="highlight-paragraph">
+        Акція! Безкоштовна доставка та підключення для всіх пральних машин у квітні!
+    </p>
+
+    <h2>Порівняльна таблиця</h2>
+    <table>
+        <tr>
+            <th>Модель</th>
+            <th>Завантаження (кг)</th>
+            <th>Клас енергозбереження</th>
+            <th>Ціна (грн)</th>
+        </tr>
+        <tr>
+            <td>Samsung WW60</td>
+            <td>6</td>
+            <td>A+++</td>
+            <td>12 000</td>
+        </tr>
+        <tr>
+            <td>LG F2V3</td>
+            <td>7</td>
+            <td>A+++</td>
+            <td>15 000</td>
+        </tr>
+        <tr>
+            <td>Bosch WAN28</td>
+            <td>7</td>
+            <td>A+</td>
+            <td>18 000</td>
+        </tr>
+    </table>
 
     <p><a href="index.html">Повернутися в магазин</a></p>
 
