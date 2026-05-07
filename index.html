@@ -4,18 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="Сєчко Юліан">
-    <title>Магазин побутової техніки</title>
-
+    <title>Магазин побутової техніки — ТехноЧарт</title>
 
     <link rel="stylesheet" href="styles.css">
 
-
     <style>
-        a {
+        a:link {
             color: #00695c;
             text-decoration: none;
             font-weight: bold;
             border-bottom: 1px dashed #00695c;
+        }
+
+        a:visited {
+            color: #6a1b9a;
+            border-bottom-color: #6a1b9a;
         }
 
         a:hover {
@@ -23,155 +26,327 @@
             border-bottom: 2px solid #004d40;
         }
 
-        a:visited {
-            color: #4a148c;
+        a:active {
+            color: #b71c1c;
+            border-bottom: 2px solid #b71c1c;
         }
     </style>
 </head>
 
 <body>
 
-    <h1 id="top">Магазин побутової техніки:ТехноЧарт!!</h1>
+    <div class="page-wrapper">
 
-    <p>Ласкаво просимо до нашого магазину побутової техніки! У нас ви можете знайти <b>все для дому</b>.</p>
+        <div class="site-header">
+            <h1 id="top">Магазин побутової техніки: <span class="brand-name">ТехноЧарт</span>!!</h1>
+            <div class="header-badge">ТОП вибір 2026</div>
+            <div class="header-actions" style="margin-top: 10px;">
+                <button onclick="activatePromoMode()"
+                    style="padding: 5px 10px; cursor: pointer; background: #27404f; color: #fff; border: none; border-radius: 3px;">Чорна
+                    п'ятниця</button>
+                <button onclick="subscribeNewsletter()"
+                    style="padding: 5px 10px; cursor: pointer; background: #02adca; color: #fff; border: none; border-radius: 3px; margin-left: 10px;">Підписатися
+                    на акції</button>
+            </div>
+        </div>
 
 
-    <p
-        style="font-size: 1.1em; color: #6a1b9a; background-color: #f3e5f5; padding: 10px 15px; border-radius: 5px; border-left: 5px solid #8e24aa; line-height: 1.9;">
-        Ми пропонуємо найкращий вибір <i>сучасних</i> пристроїв, які полегшать ваше життя.
-        Наша продукція відрізняється якістю, надійністю та доступними цінами.
-    </p>
+        <p>Ласкаво просимо до нашого магазину побутової техніки! У нас ви можете знайти <b>все для дому</b>: від
+            пральних
+            машин до роботів-пилососів.</p>
 
-    <p>Перейти до <a href="#bottom">низу сторінки</a> або відвідати <a href="https://google.com"
-            target="_blank">Google</a> для пошуку інформації.</p>
+        <p
+            style="font-size: 1.1em; color: #162530; background-color: #eef7f8; padding: 10px 15px; border-radius: 5px; border-left: 5px solid #02adca; line-height: 1.9;">
+            Ми пропонуємо найкращий вибір <i>сучасних</i> пристроїв, які полегшать ваше життя.
+            Наша продукція відрізняється якістю, надійністю та доступними цінами.
+        </p>
 
-    <h2>Акційний товар робот-пилосос Xiaomi</h2>
+        <p>Перейти до <a href="#bottom">низу сторінки</a> або відвідати <a href="https://google.com"
+                target="_blank">Google</a> для пошуку інформації.</p>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="pralka.html">Пральні машини</a></li>
+                <li><a href="holodylnyk.html">Холодильники</a></li>
+                <li><a href="pylosos.html">Пилососи</a></li>
+            </ul>
+        </nav>
+
+        <div class="promo-banner" id="main-promo-banner">
+            🎉 <span class="promo-label" id="promo-badge">Акція!</span> Безкоштовна доставка при замовленні від <span
+                class="promo-price" id="promo-price-text">3 000 грн</span>.
+            <span id="promo-text-node">Замовляйте зараз!</span>
+            <button onclick="updatePromoDOM()"
+                style="margin-left: 15px; padding: 3px 8px; cursor: pointer; border-radius: 4px; border: 1px solid #ccc; background: white; color: black;">Оновити
+                банер</button>
+        </div>
+
+        <main>
+
+            <section>
+                <h2>Акційний товар — Робот-пилосос Xiaomi</h2>
+                <div id="discount-banner" style="padding: 10px; background: #02adca; color: #fff; cursor: pointer; text-align: center; border-radius: 5px; margin-bottom: 15px;">
+                    🎁 Секретна знижка! Натисни на мене.
+                </div>
+
+                <div class="product-card-float">
+                    <div class="float-badge">-50%</div>
+                    <img id="xiaomi-img" onmouseenter="highlightImage(this)" src="https://images.unsplash.com/photo-1558317374-067fb5f30001?q=80&w=200&h=200&auto=format&fit=crop"
+                        width="180" height="180" alt="Пилосос Xiaomi" style="transition: transform 0.3s ease;">
+                    <div class="float-info">
+                        <p><span class="product-title">Xiaomi Mi Robot Vacuum</span> — автоматичне прибирання квартири
+                            без вашої участі.</p>
+                        <p class="highlight-paragraph">Лише за <span class="price-tag">2 000 грн</span>! Поспішайте —
+                            кількість товарів обмежена!</p>
+                        <button id="buy-btn" style="padding: 8px 15px; background-color: #e53935; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; margin-bottom: 10px;">Купити зараз</button>
+                        <br>
+                        <button data-toggle-id="xiaomi-specs" style="padding: 4px 8px; cursor: pointer; background: #eef6f8; border: 1px solid #00cac3; border-radius: 3px;">Детальніше (Поведінка data-toggle)</button>
+                        <div id="xiaomi-specs" style="display: none; margin-top: 10px; padding: 10px; background: #f4f8fa; border-left: 3px solid #00cac3;">
+                            <p>Технологія <span class="tech-label">LIDAR</span> дозволяє роботу точно картувати кімнату і
+                                уникати перешкод. Ідеально для квартир будь-якого планування.</p>
+                        </div>
+                        <p>
+                            <a href="https://images.unsplash.com/photo-1626806787426-5911abf4ca5b?q=80&w=800&auto=format&fit=crop"
+                                target="_blank">
+                                <img src="https://images.unsplash.com/photo-1626806787426-5911abf4ca5b?q=80&w=200&h=200&auto=format&fit=crop"
+                                    alt="Побутова техніка">
+                            </a>
+                        </p>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </section>
 
 
-    <p class="highlight-paragraph">Лише за 2000 грн! Поспішайте — кількість товарів обмежена!</p>
+            <section class="product-section">
+                <h2>Наші категорії товарів:</h2>
 
-    <p>
-        <img src="https://images.unsplash.com/photo-1558317374-067fb5f30001?q=80&w=200&h=200&auto=format&fit=crop"
-            width="400" height="400" alt="Пилосос">
-    </p>
+                <p>Оберіть категорію та ознайомтесь із повним асортиментом:</p>
 
-    <p>
-        <a href="https://images.unsplash.com/photo-1626806787426-5911abf4ca5b?q=80&w=800&auto=format&fit=crop"
-            target="_blank">
-            <img src="https://images.unsplash.com/photo-1626806787426-5911abf4ca5b?q=80&w=200&h=200&auto=format&fit=crop"
-                alt="Побутова техніка">
-        </a>
-    </p>
+                <ul>
+                    <li>
+                        Перейти до пральних машин:
+                        <button onclick="goToPralki()" style="padding: 2px 8px; cursor: pointer;">Відкрити
+                            каталог</button>
+                    </li>
+                    <li><a href="holodylnyk.html#models">Холодильники</a></li>
+                    <li><a href="pylosos.html">Пилососи</a></li>
+                </ul>
 
-    <h2>Наші категорії товарів:</h2>
-    <ul>
-        <li><a href="pralka.html">Пральні машини</a></li>
-        <li><a href="holodylnyk.html#models">Холодильники</a></li>
-        <li><a href="pylosos.html">Пилососи</a></li>
-    </ul>
+                <div style="background: #eef7f8; padding: 15px; border-radius: 5px; margin-top: 15px;">
+                    <h3>Бажаєте оформити розстрочку?</h3>
+                    <p>Розрахуйте платежі для будь-якого товару прямо зараз.</p>
+                    <button onclick="calculateInstallment()"
+                        style="padding: 5px 15px; background: #00cac3; color: #162530; font-weight: bold; border: none; border-radius: 3px; cursor: pointer;">Запустити
+                        калькулятор</button>
+                </div>
+            </section>
 
-    <h2>Етапи оформлення замовлення:</h2>
-    <ol>
-        <li>Вибір товару</li>
-        <li>Додавання до кошика</li>
-        <li>Оплата та доставка</li>
-    </ol>
+            <section class="order-section">
+                <h2>Етапи оформлення замовлення:</h2>
 
-    <h2>Терміни</h2>
-    <dl>
-        <dt>Гарантія</dt>
-        <dd>Зобов'язання продавця усунути недоліки товару.</dd>
-        <dt>Доставка</dt>
-        <dd>Транспортування товару до покупця.</dd>
-    </dl>
+                <p>Зробити покупку у ТехноЧарт просто — дотримуйтесь кількох кроків:</p>
 
-    <h2>Наші найкращі товари</h2>
-    <table>
-        <tr>
-            <th>Пральна машина Whirpool</th>
-            <th>Холодильник Samsung</th>
-            <th>Пилосос Bosch</th>
-        </tr>
-        <tr>
-            <td><img src="https://images.unsplash.com/photo-1584992236310-6edddc08acff?q=80&w=50&h=50&auto=format&fit=crop"
-                    alt="Пралка"></td>
-            <td><img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=50&h=50&auto=format&fit=crop"
-                    alt="Холодильник"></td>
-            <td><img src="https://images.unsplash.com/photo-1558317374-067fb5f30001?q=80&w=50&h=50&auto=format&fit=crop"
-                    alt="Пилосос"></td>
-        </tr>
-        <tr>
-            <td><a href="pralka.html">Перейти до інших пральних машин</a></td>
-            <td><a href="holodylnyk.html">Перейти до інших холодильників</a></td>
-            <td><a href="pylosos.html">Перейти до інших пилососів</a></td>
-        </tr>
-        <tr>
-            <td>Характеристики<br>
-                Тип пральної машини: Фронтальна<br>
-                Максимальне завантаження: 6 кг<br>
-                Тип двигуна: Інверторний<br>
-                Привод: Ремінний<br>
-                Макс. швидкість віджиму: 1200 об/хв<br>
-                Рівень шуму під час прання: 60 дБ<br>
-                Рівень шуму при віджиманні: 83 дБ<br>
-                Мова пристрою: Українська<br>
-                Технології: 6th Sense<br>
-                Конструкція барабана: Перфорована
-            </td>
-            <td>Характеристики<br>
-                Вид холодильника: Окремостоячий<br>
-                Загальний об'єм: 324 л<br>
-                Об'єм холодильної камери: 237 л<br>
-                Об'єм морозильної камери: 87 л<br>
-                Клас енергоспоживання: A++<br>
-                Система охолодження: No Frost<br>
-                Система хол. камери: No Frost<br>
-                Система мороз. камери: No Frost
-            </td>
-            <td>Характеристики<br>
-                Вид прибирання: Вологе / Сухе<br>
-                Тип пилозбірника: Контейнер (без мішка)<br>
-                Портативний пилосос: Так<br>
-                Система фільтрації: Jet Cyclone<br>
-                Потужність: 550 Вт<br>
-                Потужність всмоктування: 200 Вт<br>
-                Регулювання: Електронна на ручці<br>
-                Режими роботи: 3 режими<br>
-                Об'єм пилозбірника: 0,8 л<br>
-                Рівень шуму: 86 дБ
-            </td>
-        </tr>
-    </table>
+                <ol id="order-steps" style="cursor: pointer;">
+                    <li>Вибір товару — перегляньте каталог та оберіть потрібну модель</li>
+                    <li>Додавання до кошика — натисніть кнопку «Купити» на картці товару</li>
+                    <li>Оформлення замовлення — вкажіть адресу доставки та спосіб оплати</li>
+                    <li>Підтвердження — менеджер зв'яжеться з вами протягом 30 хвилин</li>
+                    <li>Доставка — отримайте товар у зручний для вас час</li>
+                </ol>
+            </section>
 
-    <h2>Акційні пропозиції</h2>
-    <table cellspacing="9" cellpadding="15">
-        <colgroup>
-            <col span="1" style="background-color: #fff9c4;">
-            <col span="2" style="background-color: #e3f2fd;">
-        </colgroup>
-        <tr>
-            <th colspan="3">Товари з знижкою до 50%!!!</th>
-        </tr>
-        <tr>
-            <td rowspan="2">Холодильник BORCH з знижкою до 50%!<br>
-                <img src="https://scdn.comfy.ua/89fc351a-22e7-41ee-8321-f8a9356ca351/https://cdn.comfy.ua/media/catalog/product/b/o/bosch_kgn36vl326.jpg/w_1440"
-                    width="100" height="100">
-            </td>
-            <td>Ноутбук Lenovo LOQ</td>
-            <td>Смартфон Xiaomi</td>
-        </tr>
-        <tr>
-            <td>Телевізор LG</td>
-            <td>Зарядна станція Anker</td>
-        </tr>
-    </table>
+            <section class="specs-section">
+                <dl>
+                    <dt>Гарантія</dt>
+                    <dd>Зобов'язання продавця безкоштовно усунути недоліки товару протягом гарантійного строку (12–24
+                        місяці
+                        залежно від виробника).</dd>
+                    <dt>Доставка</dt>
+                    <dd>Транспортування товару до покупця. Здійснюємо доставку по всій Україні: Нова Пошта, Укрпошта,
+                        кур'єром додому.</dd>
+                    <dt>Повернення</dt>
+                    <dd>Товар належної якості можна повернути протягом 14 днів з моменту покупки за наявності чека та
+                        оригінальної упаковки.</dd>
+                    <dt>Оплата</dt>
+                    <dd>Готівка, банківська картка, оплата частинами (ПриватБанк, Monobank), безготівковий розрахунок
+                        для
+                        юридичних осіб.</dd>
+                </dl>
+                <h2>Терміни та умови</h2>
 
-    <h2>Каталог холодильника</h2>
-    <iframe src="holodylnyk.html" width="400" height="300" name="myiframe">Ваш браузер не підтримує плаваючі
-        фрейми.</iframe>
 
-    <p id="bottom">Це низ сторінки. Повернутися <a href="#top">нагору</a>.</p>
+                <dl>
+                    <dt>Гарантія</dt>
+                    <dd>Зобов'язання продавця безкоштовно усунути недоліки товару протягом гарантійного строку (12–24
+                        місяці
+                        залежно від виробника).</dd>
+                    <dt>Доставка</dt>
+                    <dd>Транспортування товару до покупця. Здійснюємо доставку по всій Україні: Нова Пошта, Укрпошта,
+                        кур'єром додому.</dd>
+                    <dt>Повернення</dt>
+                    <dd>Товар належної якості можна повернути протягом 14 днів з моменту покупки за наявності чека та
+                        оригінальної упаковки.</dd>
+                    <dt>Оплата</dt>
+                    <dd>Готівка, банківська картка, оплата частинами (ПриватБанк, Monobank), безготівковий розрахунок
+                        для
+                        юридичних осіб.</dd>
+                </dl>
 
+
+                <p>Маєте питання щодо умов? Зателефонуйте нам: <b>0 800 33 44 55</b> (безкоштовно).</p>
+                <p>Або напишіть на <a href="mailto:support@technochart.ua">support@technochart.ua</a> — відповімо
+                    протягом 2
+                    годин.</p>
+            </section>
+
+
+            <article>
+                <h2>Наші найкращі товари</h2>
+
+                <div id="filter-menu" style="margin-bottom: 15px; background: #162530; padding: 10px; border-radius: 5px;">
+                    <span style="color: white; font-weight: bold; margin-right: 10px;">Фільтр (Menu Delegation):</span>
+                    <button data-action="showAll" style="padding: 5px 10px; cursor: pointer;">Всі товари</button>
+                    <button data-action="showDiscount" style="padding: 5px 10px; cursor: pointer;">Тільки по акції</button>
+                    <button data-action="sortByPrice" style="padding: 5px 10px; cursor: pointer;">Сортувати за ціною</button>
+                </div>
+
+                <table>
+                    <tr>
+                        <th>Пральна машина Whirpool</th>
+                        <th>Холодильник Samsung</th>
+                        <th>Пилосос Bosch</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="https://images.unsplash.com/photo-1584992236310-6edddc08acff?q=80&w=50&h=50&auto=format&fit=crop"
+                                alt="Пралка">
+                        </td>
+                        <td>
+                            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=50&h=50&auto=format&fit=crop"
+                                alt="Холодильник">
+                        </td>
+                        <td>
+                            <img src="https://images.unsplash.com/photo-1558317374-067fb5f30001?q=80&w=50&h=50&auto=format&fit=crop"
+                                alt="Пилосос">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="pralka.html">Перейти до інших пральних машин</a></td>
+                        <td><a href="holodylnyk.html">Перейти до інших холодильників</a></td>
+                        <td><a href="pylosos.html">Перейти до інших пилососів</a></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Тип: Фронтальна<br>
+                            Завантаження: 6 кг<br>
+                            Двигун: Інверторний<br>
+                            Швидкість: 1200 об/хв<br>
+                            Шум: 60 дБ<br>
+                            Технологія: 6th Sense
+                        </td>
+                        <td>
+                            Вид: Окремостоячий<br>
+                            Об'єм: 324 л (237 + 87)<br>
+                            Клас: A++<br>
+                            Охолодження: No Frost<br>
+                            Висота: 185 см
+                        </td>
+                        <td>
+                            Прибирання: Вологе / Сухе<br>
+                            Пилозбірник: Контейнер<br>
+                            Фільтрація: Jet Cyclone<br>
+                            Потужність: 550 Вт<br>
+                            Шум: 86 дБ
+                        </td>
+                    </tr>
+                </table>
+
+                <div style="margin-top: 20px; padding: 15px; background: #fdfdfd; border: 1px solid #eee;">
+                    <h3>Порівняти вартість товарів</h3>
+                    <p>Дізнайтесь, на скільки один товар дорожчий за інший:</p>
+                    <input type="number" id="price1" value="15000" style="padding: 5px;">
+                    <input type="number" id="price2" value="12000" style="padding: 5px;">
+                    <button onclick="comparePrices()" style="padding: 5px 10px; cursor: pointer;">Порівняти
+                        ціни</button>
+                </div>
+                <footer>Останнє оновлення каталогу: березень 2026 р. &nbsp;|&nbsp; Ціни вказані без урахування знижок.
+                </footer>
+            </article>
+
+            <article>
+                <h2>Акційні пропозиції</h2>
+
+                <table>
+                    <colgroup>
+                        <col span="1" style="background-color: #e6f9fa;">
+                        <col span="2" style="background-color: #d4f1f4;">
+                    </colgroup>
+                    <tr>
+                        <th colspan="3">Товари зі знижкою до 50%!!!</th>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">
+                            <b>Холодильник Bosch KGN36</b> зі знижкою 50%!<br>
+                            Було: <s>28 000 грн</s> → Стало: <b>14 000 грн</b><br>
+                            <img src="https://scdn.comfy.ua/89fc351a-22e7-41ee-8321-f8a9356ca351/https://cdn.comfy.ua/media/catalog/product/b/o/bosch_kgn36vl326.jpg/w_1440"
+                                width="100" height="100">
+                        </td>
+                        <td>Ноутбук Lenovo LOQ 15<br><small>Знижка 20% — 32 000 грн</small></td>
+                        <td>Смартфон Xiaomi 14<br><small>Знижка 15% — 25 500 грн</small></td>
+                    </tr>
+                    <tr>
+                        <td>Телевізор LG OLED 55"<br><small>Знижка 25% — 45 000 грн</small></td>
+                        <td>Зарядна станція Anker 737<br><small>Знижка 30% — 7 000 грн</small></td>
+                    </tr>
+                </table>
+
+                <footer>Акція діє до 31 березня 2026 р. Кількість товарів обмежена.</footer>
+            </article>
+
+            <section>
+                <h2>Каталог холодильників (попередній перегляд)</h2>
+                <p>Ознайомтесь із повним асортиментом холодильників — без переходу на іншу сторінку:</p>
+                <iframe src="holodylnyk.html" width="100%" height="350" name="myiframe">Ваш браузер не підтримує
+                    плаваючі
+                    фрейми.</iframe>
+            </section>
+
+        </main>
+
+        <p id="bottom">Це низ сторінки. Повернутися <a href="#top">нагору</a>.</p>
+
+        <footer
+            style="margin-top: 30px; text-align: center; font-size: 0.9em; padding: 20px; border-top: 1px solid #ccc;">
+            <script>
+                document.write("© " + new Date().getFullYear() + " Магазин побутової техніки ТехноЧарт. Всі права захищено.");
+            </script>
+            <br>
+            <a href="#" onclick="showDeveloperInfo('Сєчко', 'Юліан'); return false;"
+                style="color: #666; text-decoration: underline; margin-top: 5px; display: inline-block;">Інформація про
+                розробників сайту</a>
+        </footer>
+    </div>
+
+    <script>
+        function subscribeNewsletter() {
+            alert("Вітаємо! Підписка на новини дозволить вам отримувати промокоди.");
+            let name = prompt("Введіть ваше ім'я для розсилки:", "Користувач");
+
+            if (name !== null && name.trim() !== "") {
+                let wantsDaily = confirm("Шановний " + name + ", чи бажаєте ви отримувати сповіщення щодня? (ОК - щодня, Скасувати - раз на тиждень)");
+                if (wantsDaily) {
+                    alert("Дякуємо! Ви успішно підписалися на щоденні розсилки.");
+                } else {
+                    alert("Дякуємо! Ви отримуватимете лише найважливіші тижневі дайджести.");
+                }
+            } else {
+                alert("Підписку скасовано: ви не ввели ім'я.");
+            }
+        }
+    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>

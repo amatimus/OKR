@@ -1,15 +1,15 @@
 body {
-    background-color: #f0f4ff;
+    background-color: #f4f8fa;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
-    color: #222222;
+    color: #162530;
     line-height: 1.7;
     margin: 20px 40px;
 }
 
 h1 {
     font-size: 2em;
-    color: #1a237e;
+    color: #162530;
     font-style: normal;
     font-weight: bold;
     line-height: 1.3;
@@ -19,45 +19,44 @@ h1 {
 
 h2 {
     font-size: 1.4em;
-    color: #283593;
+    color: #27404f;
     font-style: italic;
     line-height: 1.4;
     text-align: left;
-    border-bottom: 2px solid #3949ab;
+    border-bottom: 2px solid #02adca;
     padding-bottom: 4px;
 }
 
 h3 {
     font-size: 1.1em;
-    color: #3949ab;
+    color: #02adca;
     text-align: left;
     line-height: 1.4;
 }
 
-/* --- ПОСИЛАННЯ (зовнішній рівень) --- */
 a {
-    color: #1565c0;
+    color: #02adca;
     text-decoration: underline;
     font-weight: normal;
 }
 
 a:hover {
-    color: #e53935;
+    color: #00cac3;
     text-decoration: none;
 }
 
 a:visited {
-    color: #6a1b9a;
+    color: #27404f;
 }
 
 a:active {
-    color: #e53935;
+    color: #00cac3;
 }
 
 .highlight-paragraph {
-    color: #b71c1c !important;  
-    background-color: #fff9c4;
-    border-left: 4px solid #f9a825;
+    color: #162530 !important;
+    background-color: #e6f9fa;
+    border-left: 4px solid #00cac3;
     padding: 8px 12px;
     font-size: 1em;
     line-height: 1.8;
@@ -70,10 +69,10 @@ a:active {
 
 #bottom {
     text-align: center;
-    color: #555555;
+    color: #27404f;
     font-size: 0.9em;
     margin-top: 30px;
-    border-top: 1px solid #cccccc;
+    border-top: 1px solid #b0c4cc;
     padding-top: 10px;
 }
 
@@ -81,21 +80,21 @@ ul {
     list-style-type: square;
     margin: 12px 0 12px 30px;
     padding: 0;
-    color: #1a237e;
+    color: #27404f;
     font-size: 1em;
     line-height: 1.8;
 }
 
 ul li {
-    background-color: #e8eaf6;
+    background-color: #eef6f8;
     margin-bottom: 5px;
     padding: 5px 10px;
-    border-left: 4px solid #3949ab;
+    border-left: 4px solid #02adca;
     border-radius: 3px;
 }
 
 ul li a {
-    color: #1565c0;
+    color: #02adca;
     font-weight: bold;
 }
 
@@ -103,38 +102,38 @@ ol {
     list-style-type: decimal;
     margin: 12px 0 12px 30px;
     padding: 0;
-    color: #1b5e20;
+    color: #162530;
     font-size: 1em;
     line-height: 1.8;
 }
 
 ol li {
-    background-color: #e8f5e9;
+    background-color: #eef6f8;
     margin-bottom: 5px;
     padding: 5px 10px;
-    border-left: 4px solid #2e7d32;
+    border-left: 4px solid #00cac3;
     border-radius: 3px;
 }
 
 dl {
     margin: 12px 0;
     padding: 10px 15px;
-    background-color: #fce4ec;
-    border: 1px solid #f48fb1;
+    background-color: #eef7f8;
+    border: 1px solid #00cac3;
     border-radius: 5px;
 }
 
 dt {
     font-weight: bold;
     font-size: 1.05em;
-    color: #880e4f;
+    color: #162530;
     margin-top: 8px;
     text-decoration: underline;
 }
 
 dd {
     margin-left: 20px;
-    color: #4a148c;
+    color: #27404f;
     font-size: 0.97em;
     line-height: 1.6;
 }
@@ -152,28 +151,412 @@ table {
 }
 
 th {
-    background-color: #3949ab;
+    background-color: #27404f;
     color: #ffffff;
     font-size: 1em;
     font-weight: bold;
     padding: 10px 14px;
     text-align: center;
-    border: 1px solid #283593;
+    border: 1px solid #162530;
     letter-spacing: 0.5px;
 }
 
 td {
     padding: 8px 12px;
     text-align: left;
-    border: 1px solid #c5cae9;
-    color: #333333;
+    border: 1px solid #b0c4cc;
+    color: #162530;
     vertical-align: top;
 }
 
 tr:nth-child(even) td {
-    background-color: #e8eaf6;
+    background-color: #eef6f8;
 }
 
 tr:hover td {
-    background-color: #bbdefb;
+    background-color: #d4f1f4;
+}
+
+p a {
+    text-decoration: underline dotted;
+    font-style: italic;
+}
+
+p b {
+    color: #162530;
+    font-size: 1.03em;
+}
+
+p i {
+    color: #02adca;
+}
+
+td a {
+    color: #02adca;
+    text-decoration: none;
+    border-bottom: 1px solid #00cac3;
+    font-weight: bold;
+}
+
+td a:hover {
+    color: #00cac3;
+    border-bottom-color: #02adca;
+}
+
+a img {
+    border: 3px solid transparent;
+    border-radius: 4px;
+    transition: border-color 0.2s;
+    display: block;
+}
+
+a:hover img {
+    border-color: #02adca;
+}
+
+.product-section ul {
+    background-color: #eef6f8;
+    border: 1px solid #00cac3;
+    border-radius: 5px;
+    padding: 8px 12px;
+}
+
+.product-section ul li {
+    border-left-color: #02adca;
+    background-color: #e6f5f7;
+}
+
+.specs-section p {
+    font-size: 0.95em;
+    color: #27404f;
+    margin: 4px 0;
+    padding-left: 8px;
+    border-left: 3px solid #00cac3;
+}
+
+nav>ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    list-style: none;
+    margin: 0 0 18px 0;
+    padding: 10px 16px;
+    background-color: #162530;
+    border-radius: 6px;
+}
+
+nav>ul>li {
+    background-color: transparent;
+    border-left: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+}
+
+nav>ul>li>a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 6px 14px;
+    border-radius: 4px;
+    background-color: #27404f;
+    display: inline-block;
+    transition: background-color 0.2s;
+    border-bottom: none;
+    font-style: normal;
+}
+
+nav>ul>li>a:hover {
+    background-color: #02adca;
+    color: #ffffff;
+}
+
+section>h2 {
+    color: #162530;
+    border-bottom: 3px solid #162530;
+    padding-bottom: 6px;
+    margin-top: 28px;
+}
+
+section>p {
+    margin-left: 6px;
+    padding: 6px 10px;
+    border-left: 3px solid #02adca;
+    background-color: #eef6f8;
+    border-radius: 0 4px 4px 0;
+}
+
+main>article {
+    background-color: #ffffff;
+    border: 1px solid #b0c4cc;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 20px;
+}
+
+article>footer {
+    font-size: 0.85em;
+    color: #27404f;
+    border-top: 1px dashed #27404f;
+    padding-top: 6px;
+    margin-top: 10px;
+    text-align: right;
+}
+
+h1+p {
+    font-size: 1.12em;
+    color: #27404f;
+    font-weight: bold;
+    margin-top: 4px;
+    border-bottom: 1px dashed #00cac3;
+    padding-bottom: 8px;
+}
+
+h2+p {
+    color: #27404f;
+    margin-top: 2px;
+    font-size: 0.98em;
+}
+
+p+ul {
+    margin-top: 4px;
+}
+
+ul+ol {
+    margin-top: 6px;
+}
+
+h2+dl {
+    border: 2px solid #02adca;
+    background-color: #eef6f8;
+}
+
+h2+table {
+    margin-top: 6px;
+}
+
+h2~h2 {
+    margin-top: 24px;
+}
+
+
+.highlight-paragraph~p {
+    padding-left: 6px;
+    border-left: 2px solid #00cac3;
+}
+
+nav~section {
+    margin-top: 0;
+}
+
+table~table {
+    border-top: 3px solid #02adca;
+    margin-top: 24px;
+}
+
+.order-section~ol {
+    counter-reset: none;
+}
+
+
+a:link {
+    color: #02adca;
+}
+
+a:visited {
+    color: #27404f;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #00cac3;
+    text-decoration: none;
+}
+
+a:active {
+    color: #162530;
+    font-weight: bold;
+}
+
+nav>ul>li:first-child>a {
+    background-color: #02adca;
+    border: 2px solid #00cac3;
+    color: #ffffff;
+}
+
+
+dl>dt:first-child {
+    color: #162530;
+    font-size: 1.1em;
+    border-left: 4px solid #162530;
+    padding-left: 6px;
+}
+
+ul>li:first-child {
+    background-color: #27404f;
+    color: #ffffff;
+    font-weight: bold;
+    border-left-color: #02adca;
+}
+
+ul>li:first-child a {
+    color: #00cac3;
+}
+
+section>h2::before {
+    content: "▶ ";
+    color: #02adca;
+    font-size: 0.9em;
+}
+
+article>footer::before {
+    content: "— ";
+    color: #27404f;
+}
+
+.highlight-paragraph::before {
+    content: "★ ";
+    color: #00cac3;
+    font-size: 1.1em;
+}
+
+.highlight-paragraph::after {
+    content: " ★";
+    color: #00cac3;
+    font-size: 1.1em;
+}
+
+nav>ul>li::after {
+    content: "";
+}
+
+
+.page-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.site-header {
+    background: linear-gradient(135deg, #162530 0%, #27404f 100%);
+    color: #ffffff;
+    padding: 20px 24px 16px;
+    border-radius: 8px;
+    margin-bottom: 18px;
+    overflow: hidden;
+}
+
+.site-header h1 {
+    color: #ffffff;
+    margin: 0;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+.header-badge {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    background-color: #00cac3;
+    color: #162530;
+    font-weight: bold;
+    font-size: 0.8em;
+    padding: 4px 10px;
+    border-radius: 12px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+span.brand-name {
+    color: #00cac3;
+    font-style: italic;
+}
+
+.promo-banner {
+    background-color: #e6f9fa;
+    border: 2px dashed #02adca;
+    border-radius: 6px;
+    padding: 10px 18px;
+    margin-bottom: 16px;
+    font-size: 1.02em;
+    color: #162530;
+}
+
+span.promo-label {
+    font-weight: bold;
+    color: #162530;
+    background-color: #00cac3;
+    padding: 2px 6px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+span.promo-price {
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #02adca;
+    padding: 1px 5px;
+    border-radius: 3px;
+}
+
+.product-card-float {
+    position: relative;
+    border: 1px solid #b0c4cc;
+    border-radius: 8px;
+    padding: 14px;
+    background-color: #eef6f8;
+    margin-bottom: 14px;
+    overflow: hidden;
+}
+
+.product-card-float>img {
+    float: left;
+    margin: 0 16px 8px 0;
+    border-radius: 6px;
+    border: 2px solid #02adca;
+}
+
+.float-badge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #02adca;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 0.85em;
+    padding: 4px 10px;
+    border-radius: 0 0 8px 0;
+}
+
+.float-info {
+    overflow: hidden;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+span.product-title {
+    font-weight: bold;
+    color: #162530;
+    font-size: 1.05em;
+}
+
+span.tech-label {
+    display: inline-block;
+    background-color: #e6f5f7;
+    color: #02adca;
+    border: 1px solid #00cac3;
+    border-radius: 4px;
+    padding: 0 5px;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+span.price-tag {
+    font-weight: bold;
+    color: #02adca;
+    font-size: 1.05em;
 }
